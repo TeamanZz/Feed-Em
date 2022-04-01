@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class FoodSpawner : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class FoodSpawner : MonoBehaviour
 
     public Transform foodSpawnPoint;
     public GameObject foodPrefab;
+    public ParticleSystem spawnParticles;
     public float delayBetweenFoodSpawn;
 
     private void Awake()
@@ -28,6 +30,7 @@ public class FoodSpawner : MonoBehaviour
 
     private void SpawnFood()
     {
-        Instantiate(foodPrefab, foodSpawnPoint);
+        GameObject newFood = Instantiate(foodPrefab, foodSpawnPoint);
+        // spawnParticles.Play();
     }
 }

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class FeedableCreature : MonoBehaviour
 {
-    private Animator animator;
+    public static FeedableCreature Instance;
+
+    public Animator animator;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        Instance = this;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,6 +27,6 @@ public class FeedableCreature : MonoBehaviour
 
     private void PlayEatAnimation()
     {
-        animator.Play("Eat 0", 0, 0);
+        animator.Play("Eat 0", 0, 0.1f);
     }
 }

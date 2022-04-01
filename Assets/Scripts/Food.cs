@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Food : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class Food : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        transform.localScale = Vector3.zero;
+        transform.DOScale(Vector3.one, 0.3f);
     }
 
     private void FixedUpdate()
@@ -32,6 +39,7 @@ public class Food : MonoBehaviour
         if (canInteractWithFloor)
         {
             canInteractWithFloor = false;
+            transform.DOScale(Vector3.zero, dissapearDelay);
             Destroy(gameObject, dissapearDelay);
         }
     }
