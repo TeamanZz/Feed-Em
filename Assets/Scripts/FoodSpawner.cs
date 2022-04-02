@@ -35,11 +35,15 @@ public class FoodSpawner : MonoBehaviour
         SpawnFood();
     }
 
+    public void SetLookFoodTarget()
+    {
+        FeedableCreature.Instance.lookAnimator.SetLookTarget(lastFood.transform);
+    }
+
     private void SpawnFood()
     {
         lastFood = Instantiate(foodPrefab, foodSpawnPoint);
-        FeedableCreature.Instance.lookAnimator.SetLookTarget(lastFood.transform);
-
+        SetLookFoodTarget();
         // spawnParticles.Play();
     }
 }

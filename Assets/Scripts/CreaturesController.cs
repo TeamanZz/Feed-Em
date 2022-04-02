@@ -37,6 +37,6 @@ public class CreaturesController : MonoBehaviour
 
         FeedableCreature.Instance.animator = currentCreature.GetComponent<Animator>();
         FeedableCreature.Instance.lookAnimator.HeadReference = currentCreature.transform;
-        currentCreature.DOMoveX(0, 1).SetEase(Ease.InOutBack);
+        currentCreature.DOMove(creaturesContainer.position, 1).SetEase(Ease.InOutBack);
     }
 }

@@ -37,8 +37,10 @@ public class FeedProgress : MonoBehaviour
             progressBarFilled.DOFillAmount(0, 0.5f).SetEase(Ease.InOutBack);
             progressBar.DOPunchScale(new Vector3(0.1f, 0.1f, 0.1f), 0.5f);
 
-            FeedableCreature.Instance.animator.Play("Rest", 0, 0);
+            // FeedableCreature.Instance.animator.Play("Rest", 0, 0);
             CreaturesController.Instance.ChangeCreature();
+            CurrencyController.Instance.IncreaseCurrencyCount();
+
         }
 
         for (int i = 0; i < particlesOnFeed.Count; i++)
