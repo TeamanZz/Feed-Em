@@ -22,9 +22,8 @@ public class FeedableCreature : MonoBehaviour
         {
             // Debug.Log(FoodSpawner.Instance.lastFood.transform.position);
             float value = (FoodSpawner.Instance.lastFood.transform.position.z + 3.5f) / (-0.5f + 3.5f);
-            animator.SetFloat("Blend", value);
+            animator.SetFloat("Blend", value, 0.1f, Time.deltaTime);
         }
-
     }
 
     private void OnTriggerEnter(Collider other)

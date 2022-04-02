@@ -9,6 +9,8 @@ public class Food : MonoBehaviour
     public float dissapearDelay;
     private Rigidbody rb;
 
+    public List<GameObject> foodModels = new List<GameObject>();
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -16,6 +18,7 @@ public class Food : MonoBehaviour
 
     private void Start()
     {
+        foodModels[Random.Range(0, foodModels.Count)].SetActive(true);
         transform.localScale = Vector3.zero;
         transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
         transform.DOLocalRotate(new Vector3(0, Random.Range(-200, 200), 0), 0.3f).SetEase(Ease.OutBack);

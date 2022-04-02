@@ -33,7 +33,7 @@ public class CreaturesController : MonoBehaviour
         }
 
         // currentCreature = Instantiate(creaturesList[Random.Range(0, creaturesList.Count)], creaturesSpawnPoint.position, Quaternion.Euler(-23.54f, 180, 0), creaturesContainer).transform;
-        currentCreature = Instantiate(creaturesList[Random.Range(0, creaturesList.Count)], creaturesSpawnPoint.position, Quaternion.Euler(-23.54f, 180, 0), creaturesContainer).transform;
+        currentCreature = Instantiate(creaturesList[Random.Range(0, creaturesList.Count)], creaturesSpawnPoint.localPosition, Quaternion.Euler(0, 180, 0), creaturesContainer).transform;
 
         FeedableCreature.Instance.animator = currentCreature.GetComponent<Animator>();
         FeedableCreature.Instance.lookAnimator.HeadReference = currentCreature.transform;
