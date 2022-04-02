@@ -1,16 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FIMSpace.FLook;
 
 public class FeedableCreature : MonoBehaviour
 {
     public static FeedableCreature Instance;
 
+    public FIMSpace.FLook.FLookAnimator lookAnimator;
     public Animator animator;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void FixedUpdate()
+    {
+
+        if (animator != null && FoodSpawner.Instance.lastFood != null)
+        {
+            // Debug.Log(FoodSpawner.Instance.lastFood.transform.position);
+            float value = (FoodSpawner.Instance.lastFood.transform.position.z + 3.5f) / (-0.5f + 3.5f);
+            animator.SetFloat("Blend", value);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)

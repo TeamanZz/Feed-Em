@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using FIMSpace.FLook;
 
 public class FoodSpawner : MonoBehaviour
 {
@@ -11,10 +12,16 @@ public class FoodSpawner : MonoBehaviour
     public GameObject foodPrefab;
     public ParticleSystem spawnParticles;
     public float delayBetweenFoodSpawn;
+    public GameObject lastFood;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        SpawnFood();
     }
 
     public void SpawnFoodAfterDelay()
@@ -30,7 +37,9 @@ public class FoodSpawner : MonoBehaviour
 
     private void SpawnFood()
     {
-        GameObject newFood = Instantiate(foodPrefab, foodSpawnPoint);
+        lastFood = Instantiate(foodPrefab, foodSpawnPoint);
+        FeedableCreature.Instance.lookAnimator.SetLookTarget(lastFood.transform);
+
         // spawnParticles.Play();
     }
 }

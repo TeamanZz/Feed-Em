@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+
 public class CreaturesController : MonoBehaviour
 {
     public static CreaturesController Instance;
@@ -10,8 +11,6 @@ public class CreaturesController : MonoBehaviour
     public Transform creaturesContainer;
     public Transform creaturesSpawnPoint;
     public Transform currentCreature;
-
-    public FeedableCreature feedableCreature;
 
     public List<GameObject> creaturesList = new List<GameObject>();
 
@@ -33,9 +32,11 @@ public class CreaturesController : MonoBehaviour
             currentCreature.transform.parent = null;
         }
 
+        // currentCreature = Instantiate(creaturesList[Random.Range(0, creaturesList.Count)], creaturesSpawnPoint.position, Quaternion.Euler(-23.54f, 180, 0), creaturesContainer).transform;
         currentCreature = Instantiate(creaturesList[Random.Range(0, creaturesList.Count)], creaturesSpawnPoint.position, Quaternion.Euler(-23.54f, 180, 0), creaturesContainer).transform;
-        currentCreature.DOMoveX(0, 1).SetEase(Ease.InOutBack);
 
-        feedableCreature.animator = currentCreature.GetComponent<Animator>();
+        FeedableCreature.Instance.animator = currentCreature.GetComponent<Animator>();
+        FeedableCreature.Instance.lookAnimator.HeadReference = currentCreature.transform;
+        currentCreature.DOMoveX(0, 1).SetEase(Ease.InOutBack);
     }
 }

@@ -17,7 +17,8 @@ public class Food : MonoBehaviour
     private void Start()
     {
         transform.localScale = Vector3.zero;
-        transform.DOScale(Vector3.one, 0.3f);
+        transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
+        transform.DOLocalRotate(new Vector3(0, Random.Range(-200, 200), 0), 0.3f).SetEase(Ease.OutBack);
     }
 
     private void FixedUpdate()
@@ -29,7 +30,7 @@ public class Food : MonoBehaviour
     {
         if (transform.position.y <= 0 && canInteractWithFloor)
         {
-            canInteractWithFloor = false;
+            Dissapear();
             FoodSpawner.Instance.SpawnFoodAfterDelay();
         }
     }
@@ -38,9 +39,10 @@ public class Food : MonoBehaviour
     {
         if (canInteractWithFloor)
         {
+            FeedableCreature.Instance.lookAnimator.SetLookTarget(null);
             canInteractWithFloor = false;
             transform.DOScale(Vector3.zero, dissapearDelay);
-            Destroy(gameObject, dissapearDelay);
+            Destroy(gameObject, dissapearDelay + 0.1f);
         }
     }
 }

@@ -1,95 +1,263 @@
 fileFormatVersion: 2
 guid: f96c5541ec874cb4ea42f6bc6474c3ac
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: ArmL1
-    100004: ArmL2
-    100006: ArmL3
-    100008: ArmR1
-    100010: ArmR2
-    100012: ArmR3
-    100014: Center
-    100016: Head
-    100018: Head_End
-    100020: joint3
-    100022: joint4
-    100024: joint5
-    100026: joint6
-    100028: joint7
-    100030: LegL1
-    100032: LegL2
-    100034: LegL3
-    100036: LegR1
-    100038: LegR2
-    100040: LegR3
-    100042: Mouth_Top1
-    100044: Mouth_Top2
-    100046: Mouth_Under1
-    100048: Mouth_Under2
-    100050: Root
-    100052: Spine1
-    100054: Spine2
-    100056: WingL1
-    100058: WingL2
-    100060: WingL3
-    100062: WingL4
-    100064: WingR1
-    100066: WingR2
-    100068: WingR3
-    100070: WingR4
-    100072: Tail1
-    100074: Tail2
-    100076: Tail3
-    100078: Tail4
-    100080: Tail5
-    400000: //RootNode
-    400002: ArmL1
-    400004: ArmL2
-    400006: ArmL3
-    400008: ArmR1
-    400010: ArmR2
-    400012: ArmR3
-    400014: Center
-    400016: Head
-    400018: Head_End
-    400020: joint3
-    400022: joint4
-    400024: joint5
-    400026: joint6
-    400028: joint7
-    400030: LegL1
-    400032: LegL2
-    400034: LegL3
-    400036: LegR1
-    400038: LegR2
-    400040: LegR3
-    400042: Mouth_Top1
-    400044: Mouth_Top2
-    400046: Mouth_Under1
-    400048: Mouth_Under2
-    400050: Root
-    400052: Spine1
-    400054: Spine2
-    400056: WingL1
-    400058: WingL2
-    400060: WingL3
-    400062: WingL4
-    400064: WingR1
-    400066: WingR2
-    400068: WingR3
-    400070: WingR4
-    400072: Tail1
-    400074: Tail2
-    400076: Tail3
-    400078: Tail4
-    400080: Tail5
-    7400000: Anim_Dra_Roar
-    9500000: //RootNode
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: ArmL1
+  - first:
+      1: 100004
+    second: ArmL2
+  - first:
+      1: 100006
+    second: ArmL3
+  - first:
+      1: 100008
+    second: ArmR1
+  - first:
+      1: 100010
+    second: ArmR2
+  - first:
+      1: 100012
+    second: ArmR3
+  - first:
+      1: 100014
+    second: Center
+  - first:
+      1: 100016
+    second: Head
+  - first:
+      1: 100018
+    second: Head_End
+  - first:
+      1: 100020
+    second: joint3
+  - first:
+      1: 100022
+    second: joint4
+  - first:
+      1: 100024
+    second: joint5
+  - first:
+      1: 100026
+    second: joint6
+  - first:
+      1: 100028
+    second: joint7
+  - first:
+      1: 100030
+    second: LegL1
+  - first:
+      1: 100032
+    second: LegL2
+  - first:
+      1: 100034
+    second: LegL3
+  - first:
+      1: 100036
+    second: LegR1
+  - first:
+      1: 100038
+    second: LegR2
+  - first:
+      1: 100040
+    second: LegR3
+  - first:
+      1: 100042
+    second: Mouth_Top1
+  - first:
+      1: 100044
+    second: Mouth_Top2
+  - first:
+      1: 100046
+    second: Mouth_Under1
+  - first:
+      1: 100048
+    second: Mouth_Under2
+  - first:
+      1: 100050
+    second: Root
+  - first:
+      1: 100052
+    second: Spine1
+  - first:
+      1: 100054
+    second: Spine2
+  - first:
+      1: 100056
+    second: WingL1
+  - first:
+      1: 100058
+    second: WingL2
+  - first:
+      1: 100060
+    second: WingL3
+  - first:
+      1: 100062
+    second: WingL4
+  - first:
+      1: 100064
+    second: WingR1
+  - first:
+      1: 100066
+    second: WingR2
+  - first:
+      1: 100068
+    second: WingR3
+  - first:
+      1: 100070
+    second: WingR4
+  - first:
+      1: 100072
+    second: Tail1
+  - first:
+      1: 100074
+    second: Tail2
+  - first:
+      1: 100076
+    second: Tail3
+  - first:
+      1: 100078
+    second: Tail4
+  - first:
+      1: 100080
+    second: Tail5
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: ArmL1
+  - first:
+      4: 400004
+    second: ArmL2
+  - first:
+      4: 400006
+    second: ArmL3
+  - first:
+      4: 400008
+    second: ArmR1
+  - first:
+      4: 400010
+    second: ArmR2
+  - first:
+      4: 400012
+    second: ArmR3
+  - first:
+      4: 400014
+    second: Center
+  - first:
+      4: 400016
+    second: Head
+  - first:
+      4: 400018
+    second: Head_End
+  - first:
+      4: 400020
+    second: joint3
+  - first:
+      4: 400022
+    second: joint4
+  - first:
+      4: 400024
+    second: joint5
+  - first:
+      4: 400026
+    second: joint6
+  - first:
+      4: 400028
+    second: joint7
+  - first:
+      4: 400030
+    second: LegL1
+  - first:
+      4: 400032
+    second: LegL2
+  - first:
+      4: 400034
+    second: LegL3
+  - first:
+      4: 400036
+    second: LegR1
+  - first:
+      4: 400038
+    second: LegR2
+  - first:
+      4: 400040
+    second: LegR3
+  - first:
+      4: 400042
+    second: Mouth_Top1
+  - first:
+      4: 400044
+    second: Mouth_Top2
+  - first:
+      4: 400046
+    second: Mouth_Under1
+  - first:
+      4: 400048
+    second: Mouth_Under2
+  - first:
+      4: 400050
+    second: Root
+  - first:
+      4: 400052
+    second: Spine1
+  - first:
+      4: 400054
+    second: Spine2
+  - first:
+      4: 400056
+    second: WingL1
+  - first:
+      4: 400058
+    second: WingL2
+  - first:
+      4: 400060
+    second: WingL3
+  - first:
+      4: 400062
+    second: WingL4
+  - first:
+      4: 400064
+    second: WingR1
+  - first:
+      4: 400066
+    second: WingR2
+  - first:
+      4: 400068
+    second: WingR3
+  - first:
+      4: 400070
+    second: WingR4
+  - first:
+      4: 400072
+    second: Tail1
+  - first:
+      4: 400074
+    second: Tail2
+  - first:
+      4: 400076
+    second: Tail3
+  - first:
+      4: 400078
+    second: Tail4
+  - first:
+      4: 400080
+    second: Tail5
+  - first:
+      74: 7400000
+    second: Anim_Dra_Roar
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -118,6 +286,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Anim_Dra_Roar
       takeName: Anim_Dra_Roar
+      internalID: 0
       firstFrame: 321
       lastFrame: 360
       wrapMode: 0
@@ -142,7 +311,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 321
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -150,25 +319,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -177,10 +353,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -190,13 +366,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
