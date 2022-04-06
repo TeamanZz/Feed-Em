@@ -10,7 +10,10 @@ public class CurrencyController : MonoBehaviour
     public static CurrencyController Instance;
 
     public TextMeshProUGUI currencyText;
+    public TextMeshProUGUI shopCurrencyText;
+
     public Image currencyImage;
+    public Image shopCurrencyImage;
 
     public int currencyCount;
 
@@ -20,12 +23,22 @@ public class CurrencyController : MonoBehaviour
 
         currencyCount = 0;
         currencyText.text = currencyCount.ToString();
+        shopCurrencyText.text = currencyCount.ToString();
+    }
+
+    public void DecreaseCurrencyCount(int value)
+    {
+        currencyCount -= value;
+        currencyText.text = currencyCount.ToString();
+        shopCurrencyText.text = currencyCount.ToString();
+        StartCoroutine(PlayShopCurrencyAnimation());
     }
 
     public void IncreaseCurrencyCount()
     {
         currencyCount += 1;
         currencyText.text = currencyCount.ToString();
+        shopCurrencyText.text = currencyCount.ToString();
         StartCoroutine(PlayCurrencyAnimation());
 
         SFX.Instance.PlayCurrencyIncrease();
@@ -38,5 +51,14 @@ public class CurrencyController : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         currencyText.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
         currencyImage.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
+    }
+
+    public IEnumerator PlayShopCurrencyAnimation()
+    {
+        shopCurrencyText.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 0.2f).SetEase(Ease.OutBack);
+        shopCurrencyImage.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 0.2f).SetEase(Ease.OutBack);
+        yield return new WaitForSeconds(0.2f);
+        shopCurrencyText.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
+        shopCurrencyImage.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
     }
 }
