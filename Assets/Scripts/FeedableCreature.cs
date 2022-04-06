@@ -17,7 +17,6 @@ public class FeedableCreature : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         if (animator != null && FoodSpawner.Instance.lastFood != null)
         {
             // Debug.Log(FoodSpawner.Instance.lastFood.transform.position);
@@ -35,6 +34,8 @@ public class FeedableCreature : MonoBehaviour
             FeedProgress.Instance.IncreaseProgressBarValue();
             food.Dissapear();
             FoodSpawner.Instance.SpawnFoodAfterDelay();
+
+            DragonsSFX.Instance.PlayChewing();
         }
     }
 

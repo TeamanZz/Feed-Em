@@ -22,12 +22,13 @@ public class CurrencyController : MonoBehaviour
         currencyText.text = currencyCount.ToString();
     }
 
-    [ContextMenu("animate")]
     public void IncreaseCurrencyCount()
     {
         currencyCount += 1;
         currencyText.text = currencyCount.ToString();
         StartCoroutine(PlayCurrencyAnimation());
+
+        SFX.Instance.PlayCurrencyIncrease();
     }
 
     public IEnumerator PlayCurrencyAnimation()

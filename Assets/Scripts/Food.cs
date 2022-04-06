@@ -18,10 +18,11 @@ public class Food : MonoBehaviour
 
     private void Start()
     {
-        foodModels[Random.Range(0, foodModels.Count)].SetActive(true);
+        var foodModel = foodModels[Random.Range(0, foodModels.Count)];
+        foodModel.SetActive(true);
         transform.localScale = Vector3.zero;
         transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
-        transform.DOLocalRotate(new Vector3(0, Random.Range(-200, 200), 0), 0.3f).SetEase(Ease.OutBack);
+        foodModel.transform.DOLocalRotate(new Vector3(0, Random.Range(-200, 200), 0), 0.3f).SetEase(Ease.OutBack);
     }
 
     private void FixedUpdate()
@@ -35,6 +36,7 @@ public class Food : MonoBehaviour
         {
             Dissapear();
             FoodSpawner.Instance.SpawnFoodAfterDelay();
+            DragonsSFX.Instance.PlaySad();
         }
     }
 
