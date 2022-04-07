@@ -21,7 +21,6 @@ public class CurrencyController : MonoBehaviour
     {
         Instance = this;
 
-        currencyCount = 0;
         currencyText.text = currencyCount.ToString();
         shopCurrencyText.text = currencyCount.ToString();
     }
@@ -31,7 +30,7 @@ public class CurrencyController : MonoBehaviour
         currencyCount -= value;
         currencyText.text = currencyCount.ToString();
         shopCurrencyText.text = currencyCount.ToString();
-        StartCoroutine(PlayShopCurrencyAnimation());
+        // StartCoroutine(PlayShopCurrencyAnimation());
     }
 
     public void IncreaseCurrencyCount()

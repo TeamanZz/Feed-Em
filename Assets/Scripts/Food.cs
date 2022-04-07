@@ -10,6 +10,7 @@ public class Food : MonoBehaviour
     private Rigidbody rb;
 
     public List<GameObject> foodModels = new List<GameObject>();
+    // public Renderer foodRenderer;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Food : MonoBehaviour
     private void Start()
     {
         var foodModel = foodModels[Random.Range(0, foodModels.Count)];
+        // foodRenderer.material.SetTextureOffset("_MainTex", new Vector2(Random.Range(-10, 10), Random.Range(-10, 10)));
         foodModel.SetActive(true);
         transform.localScale = Vector3.zero;
         transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);

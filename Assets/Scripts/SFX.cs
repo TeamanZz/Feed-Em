@@ -19,4 +19,9 @@ public class SFX : MonoBehaviour
     {
         source.PlayOneShot(soundsList[0]);
     }
+
+    public void PlayBuy()
+    {
+        source.PlayOneShot(soundsList[1]);
+    }
 }

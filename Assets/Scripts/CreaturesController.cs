@@ -12,7 +12,8 @@ public class CreaturesController : MonoBehaviour
     public Transform creaturesSpawnPoint;
     public Transform currentCreature;
 
-    public List<GameObject> creaturesList = new List<GameObject>();
+    public List<GameObject> availableCreaturesList = new List<GameObject>();
+    public List<GameObject> generalCreaturesList = new List<GameObject>();
 
     private void Awake()
     {
@@ -24,6 +25,11 @@ public class CreaturesController : MonoBehaviour
         ChangeCreature();
     }
 
+    public void MakeCreatureAvailable(int index)
+    {
+        availableCreaturesList.Add(generalCreaturesList[index]);
+    }
+
     public void ChangeCreature()
     {
         if (currentCreature != null)
@@ -33,7 +39,7 @@ public class CreaturesController : MonoBehaviour
         }
 
         // currentCreature = Instantiate(creaturesList[Random.Range(0, creaturesList.Count)], creaturesSpawnPoint.position, Quaternion.Euler(-23.54f, 180, 0), creaturesContainer).transform;
-        currentCreature = Instantiate(creaturesList[Random.Range(0, creaturesList.Count)], creaturesSpawnPoint.localPosition, Quaternion.Euler(0, 180, 0), creaturesContainer).transform;
+        currentCreature = Instantiate(availableCreaturesList[Random.Range(0, availableCreaturesList.Count)], creaturesSpawnPoint.localPosition, Quaternion.Euler(0, 180, 0), creaturesContainer).transform;
 
         FeedableCreature.Instance.animator = currentCreature.GetComponent<Animator>();
         FeedableCreature.Instance.lookAnimator.HeadReference = currentCreature.transform;
