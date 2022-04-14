@@ -242,9 +242,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 8417546430968982399, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
+    - target: {fileID: 7337519785075128583, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417546430968982399, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
@@ -536,7 +540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buy New Dragon 3
+  m_text: Buy New Dragon 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32310d4be6bddc840a8d1eac12365947, type: 2}
   m_sharedMaterial: {fileID: -4238502083967933737, guid: 32310d4be6bddc840a8d1eac12365947, type: 2}
@@ -1148,6 +1152,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1587209432071901460, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645436619348014134, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2075929625700299459, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1174,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5967773466599598313, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
@@ -1370,7 +1382,7 @@ MonoBehaviour:
   shopCurrencyText: {fileID: 771915089}
   currencyImage: {fileID: 748274619}
   shopCurrencyImage: {fileID: 1924957070}
-  currencyCount: 1000
+  currencyCount: 0
 --- !u!114 &417884011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,7 +1396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopPanel: {fileID: 1194886630}
-  lastCreaturePrice: 3
+  lastCreaturePrice: 2
   buyRandomCreatureButton: {fileID: 1600981358}
   buttonPriceText: {fileID: 77031114}
   generalCreaturesItems:
@@ -1492,10 +1504,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1587209432071901460, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2075929625700299459, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1507,30 +1515,6 @@ PrefabInstance:
     - target: {fileID: 2349592732185866023, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: index
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2349592732185866023, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
-      propertyPath: itemState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2717113889639564963, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5020814775203533095, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 417884011}
-    - target: {fileID: 5020814775203533095, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyRandomCreature
-      objectReference: {fileID: 0}
-    - target: {fileID: 5020814775203533095, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CreaturesShop, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5020814775203533095, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
@@ -2129,6 +2113,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7705010525471295553, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862511749595008788, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -2729,6 +2717,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7337519785075128583, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705010525471295553, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -3951,9 +3943,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1587209432071901460, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1645436619348014134, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2075929625700299459, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_IsActive
@@ -3978,6 +3974,10 @@ PrefabInstance:
     - target: {fileID: 5020814775203533095, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417546430968982399, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088c29f48cf10714d8e765fe7f132d4b, type: 3}

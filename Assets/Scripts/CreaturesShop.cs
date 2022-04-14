@@ -42,7 +42,7 @@ public class CreaturesShop : MonoBehaviour
     public void BuyRandomCreature()
     {
         CurrencyController.Instance.DecreaseCurrencyCount(lastCreaturePrice);
-        lastCreaturePrice += 2;
+        lastCreaturePrice = 2;
         UpdateLastPriceText();
 
         List<CreatureItem> lockedCreatures = generalCreaturesItems.FindAll(x => x.itemState == CreatureItem.ItemState.Locked);
