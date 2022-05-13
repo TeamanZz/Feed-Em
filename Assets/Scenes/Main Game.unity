@@ -1356,6 +1356,14 @@ MonoBehaviour:
   currentCreature: {fileID: 0}
   availableCreaturesList:
   - {fileID: 1034844629304111627, guid: 3140943fe59865544a622c4bb27280b2, type: 3}
+  - {fileID: 2181385752272073091, guid: 7151b5baa6542f74c809ee505e77a3e0, type: 3}
+  - {fileID: 5205320739183875201, guid: f9a062521a684b84ca1179c0a24985f9, type: 3}
+  - {fileID: 6734055608777744776, guid: 3fdcd10a3a355844fa2616356b1404b9, type: 3}
+  - {fileID: 5467293780270378653, guid: 20b36a28e440b1a4f8a0fb5e42c129f5, type: 3}
+  - {fileID: 1094389920240372268, guid: 703ce5bbc424ac947a039312c8c18b01, type: 3}
+  - {fileID: 559839889887336786, guid: 7506c4aeee20d6e4fb9e7035a534191f, type: 3}
+  - {fileID: 1894539021574810800, guid: be1a9ee94fe55694bb737332fb0d4b2f, type: 3}
+  - {fileID: 2537654427907145077, guid: cb2c6c3b2b373714d97664a124baa578, type: 3}
   generalCreaturesList:
   - {fileID: 1034844629304111627, guid: 3140943fe59865544a622c4bb27280b2, type: 3}
   - {fileID: 2181385752272073091, guid: 7151b5baa6542f74c809ee505e77a3e0, type: 3}
